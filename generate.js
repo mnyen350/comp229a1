@@ -6,6 +6,8 @@ const fs = require('fs');
 const ejs = require('ejs');
 const path = require('path');
 
+const outputDirectory = './docs';
+
 const views = [
     ['aboutme.ejs', { title: 'About Me' }],  
     ['contactme.ejs', { title: 'Contact Me' }],
@@ -51,11 +53,11 @@ for (const [fileName, args, htmlFileName] of views) {
     });
 
     let saveFileName = htmlFileName ?? fileName.substring(0, fileName.indexOf('.'));
-    fs.writeFileSync(`./dist/${saveFileName}.html`, html);
+    fs.writeFileSync(`${outputDirectory}/${saveFileName}.html`, html);
 }
 
 // dependencies
-fs.cpSync('./node_modules/bootstrap', './dist/bootstrap', { recursive: true });
-fs.cpSync('./node_modules/font-awesome', './dist/font-awesome', { recursive: true });
-fs.cpSync('./node_modules/jquery', './dist/jquery', { recursive: true });
-fs.cpSync('./public', './dist', { recursive: true });
+fs.cpSync('./node_modules/bootstrap', `${outputDirectory}/bootstrap`, { recursive: true });
+fs.cpSync('./node_modules/font-awesome', `${outputDirectory}/font-awesome`, { recursive: true });
+fs.cpSync('./node_modules/jquery', `${outputDirectory}/jquery`, { recursive: true });
+fs.cpSync('./public', `${outputDirectory}`, { recursive: true });
