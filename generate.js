@@ -1,7 +1,9 @@
 /*
-    EJS to Static Site Generator
+  FileName: generate.js
+  Author: Minh Nguyen
+  ID:301317346
+  Date:9-30-2023
 */
-
 const fs = require('fs');
 const ejs = require('ejs');
 const path = require('path');

@@ -1,3 +1,9 @@
+/*
+  FileName: index.js
+  Author: Minh Nguyen
+  ID:301317346
+  Date:9-30-2023
+*/
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 const app = require('./app.js');

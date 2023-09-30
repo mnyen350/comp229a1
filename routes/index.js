@@ -1,3 +1,10 @@
+/*
+  FileName: index.js
+  Author: Minh Nguyen
+  ID:301317346
+  Date:9-30-2023
+*/
+
 const express = require('express');
 
 // create the router
@@ -15,12 +22,25 @@ router.get('/aboutme', function(req, res, next) {
   res.render('aboutme', { title: 'About Me' });
 });
 
+router.get('/services', function(req, res, next) {
+  res.render('services', { title: 'Services' });
+});
+
+//
+// contact
+//
+
 router.get('/contactme', function(req, res, next) {
   res.render('contactme', { title: 'Contact Me' });
 });
 
-router.get('/services', function(req, res, next) {
-  res.render('services', { title: 'Services' });
+router.post('/contact', function(req, res, next) {
+  console.log('--- Contact ---');
+  console.log('query', req.query);
+  console.log('params', req.params);
+  console.log('body', req.body);
+  console.log('--- End Contact ---');
+  res.redirect('/');
 });
 
 //

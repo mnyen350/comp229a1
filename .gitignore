@@ -1,3 +1,6 @@
+# project specific
+generate.js
+
 # Logs
 logs
 *.log

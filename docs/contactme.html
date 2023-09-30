@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="stylesheets/style.css"/>
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css"/>
@@ -14,11 +15,12 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
 
+    <!-- Logo -->
     <img src="images/logo.png" alt="logo" style: width="100px"; height="100px">
+
+    <!-- Navigation -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-       
-      <b>
-        <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ml-auto">
           
           <li class="nav-item">
             <a class="nav-link "  href="index.html">
@@ -50,8 +52,7 @@
             </a>
           </li>
 
-        </ul>
-        </b>
+      </ul>
     </div>
   </div>
 </nav>
@@ -62,35 +63,36 @@
     <div class="row">
       <div class="col-12">
         <div>
-          <form>
+          <!-- Contact Form -->
+          <form action="/contact" method="post">
             <div class="form-group row">
               <label for="inputName" class="col-sm-2 col-form-label">Name</label>
               <div class="col-sm-5">
-                <input type="text" class="form-control" id="inputFName" placeholder="First Name">
+                <input type="text" class="form-control" name="inputFName" id="inputFName" placeholder="First Name">
               </div>
               <div class="col-sm-5">
-                <input type="text" class="form-control" id="inputLastName" placeholder="Last Name">
+                <input type="text" class="form-control" name="inputLastName" id="inputLastName" placeholder="Last Name">
               </div>
             </div>
             <!-------email---------->
             <div class="form-group row">
               <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
               <div class="col-sm-10">
-                <input type="email" class="form-control" id="inputEmail" placeholder="example@example.com">
+                <input type="email" class="form-control" name="inputEmail" id="inputEmail" placeholder="example@example.com">
               </div>
             </div>
             <!--------number--------->
             <div class="form-group row">
               <label for="inputPhoneNumber" class="col-sm-2 col-form-label">Contact Number</label>
               <div class="col-sm-10">
-                <input type="tel" class="form-control" id="inputPhoneNumber" placeholder="(xxx)xxx-xxxx">
+                <input type="tel" class="form-control" name="inputPhoneNumber" id="inputPhoneNumber" placeholder="(xxx)xxx-xxxx">
               </div>
             </div>
-            <!---- -->
+            <!----message  -->
             <div class="form-group row">
               <label for="inputMessage" class="col-sm-2 col-form-label">Message</label>
               <div class="col-sm-10">
-                <textarea class="form-control" id="inputMessage" rows="5"></textarea>
+                <textarea class="form-control" name="inputMessage" id="inputMessage" rows="5"></textarea>
               </div>
             </div>
             <div class="pt-2 d-flex justify-content-end">
@@ -108,8 +110,10 @@
 
 <!--script section-->
 <footer>
-  <span>&copy;2023 All rights reserved</span>
+  <!-- Copyright -->
+  <span>&copy;2023 Minh Nguyen. All rights reserved</span>
 </footer>
+<!-- Javascript-->
 <script src="jquery/dist/jquery.min.js"></script>
 <script src="bootstrap/dist/js/bootstrap.min.js"></script>
 </body>

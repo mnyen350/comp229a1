@@ -6,6 +6,7 @@
   <div class="jumbotron p-4">
     <div class="row">
       <div class="col-7 d-flex align-items-center">
+        <!-- Project Description-->
         <%if(project=="dungeoncrawler"){%>
         <%- include partials/projects/dungeoncrawler %>
         <% } else if (project=="bomberman") { %>
@@ -14,29 +15,30 @@
         <%- include partials/projects/conquer %>
         <% } else { %> 
           <p>
-            dis the default text if nothing found
+            Click on a project to hear more about it! 
           </p>
         <% } %>
       </div>
       <div class="col-5">
+        <!-- Project Images -->
         <div class="row">
           <div class="col-12">
             <a href="/conquer">
-              <img class="w-50 mw-50 project-image <%= (project=='conquer') ? 'project-image-selected' : '' %>" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1200px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg" />
+              <img class="w-50 mw-50 project-image <%= (project=='conquer') ? 'project-image-selected' : '' %>" src="/images/conquer.png" />
             </a>
           </div>          
         </div>
         <div class="row pt-2">
           <div class="col-12">
             <a href="/dungeoncrawler">
-              <img class="w-50 mw-50 project-image <%= (project=='dungeoncrawler') ? 'project-image-selected' : '' %>" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1200px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg" />
+              <img class="w-50 mw-50 project-image <%= (project=='dungeoncrawler') ? 'project-image-selected' : '' %>" src="/images/cc3k.png" />
             </a>
           </div>          
         </div>
         <div class="row pt-2" >
           <div class="col-12">
             <a href="/bomberman">
-              <img class="w-50 mw-50 project-image <%= (project=='bomberman') ? 'project-image-selected' : '' %>" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1200px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg" />
+              <img class="w-50 mw-50 project-image <%= (project=='bomberman') ? 'project-image-selected' : '' %>" src="/images/bomberman.png" />
             </a>
           </div>          
         </div>
